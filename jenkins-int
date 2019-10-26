@@ -1,9 +1,8 @@
 pipeline {
-    // New cnahges
+    // New changes
     environment {
 
-        BUILD_TAG='2.5.7-alpha'
-
+        // BUILD_TAG='2.5.7-alpha'
 
     }
 
@@ -12,9 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-
                 echo env.BUILD_TAG
-
             }
         }
         stage('Test') {
@@ -32,6 +29,7 @@ pipeline {
         stage('Pushing') {
             steps {
                 echo 'Pushing....'
+            }
         }
         stage('Deploy') {
             steps {

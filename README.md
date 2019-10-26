@@ -17,5 +17,5 @@
   1. new item pipeline 
   2. See the image bellow for how to set tag 
   
-  ![](figs/2019-10-25_18-20-41_screenshot.png)
+  ![pipeline](./figs/2019-10-25_18-20-41_screenshot.png)
   

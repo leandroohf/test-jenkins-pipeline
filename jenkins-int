@@ -1,0 +1,71 @@
+pipeline {
+    // Changes in Develop branch
+    environment {
+
+          // Version should  2.X.y-alpha.
+        BUILD_TAG='2.5.7-alpha'
+        VOICE_ML_VERSION="int-dia"
+
+    }
+
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+
+                echo env.VOICE_ML_VERSION
+
+            }
+        }
+        stage('Test') {
+            steps {
+                // XXX: the pytest unit test expect that the recipes are copied into 
+                // respective kaldi folders
+                echo 'Testing..'
+                dir("${WORKSPACE}/repo/VoiceML/voice_ml"){
+
+                    echo 'Do something'
+
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+
+                echo 'Building..'
+
+                dir("${WORKSPACE}/repo/VoiceML"){
+
+                }
+            }
+        }
+        stage('Pushing') {
+            steps {
+                echo 'Pushing....'
+                dir("${WORKSPACE}/repo/VoiceML"){
+
+            }
+        }
+        stage('Deploy') {
+            steps {
+
+                echo 'Deploying....'
+
+                dir("${WORKSPACE}/repo/VoiceML"){
+
+
+                }
+            }
+        }
+        stage('Integration Test') {
+
+            steps {
+                echo 'Testing..'
+                dir("${WORKSPACE}/repo/VoiceML/voice_ml"){
+
+                    }
+            }
+        }
+    }
+}

@@ -1,10 +1,4 @@
 pipeline {
-    // New changes
-    environment {
-
-        // BUILD_TAG='2.5.7-alpha'
-
-    }
 
     agent any
 
